@@ -1,0 +1,41 @@
+$colors : (
+    primary : (
+        400: hsl(0, 90%, 59%),
+        200: hsl(0, 89%, 68%),
+        100: hsl(0, 88%, 77%)
+    ),
+    text : (
+        400: hsl(0, 0%, 0%),
+        200: hsl(221, 12%, 35%),
+        100: hsl(223, 13%, 57%),
+        000: hsl(0, 0%, 100%)
+    ),
+    background: (
+        400: hsl(0, 1%, 18%),
+        300: hsl(0, 2%, 40%),
+        200: hsl(0, 2%, 90%),
+        150: hsl(0, 0%, 95%),
+        100: hsl(0, 0%, 100%),
+    )
+);
+
+// global color tokens 
+$clr-primary-400: hsl(0, 90%, 59%);
+$clr-primary-200: hsl(0, 89%, 68%);
+$clr-primary-100: hsl(0, 88%, 77%);
+$clr-text-400: hsl(0, 0%, 0%);
+$clr-text-200: hsl(221, 12%, 35%);
+$clr-text-100: hsl(223, 13%, 57%);
+$clr-text-000: hsl(0, 0%, 100%);
+$clr-background-400: hsl(0, 1%, 18%);
+$clr-background-300: hsl(0, 2%, 40%);
+$clr-background-200: hsl(0, 2%, 90%);
+$clr-background-150: hsl(0, 0%, 95%);
+$clr-background-100: hsl(0, 0%, 100%);
+
+
+// contextual color tokens 
+$color-text-default: $clr-text-200;
+$color-text-interactive-default: $clr-text-100;
+$color-text-interactive-hover: $clr-primary-400;
+$color-background-default: $clr-background-100;

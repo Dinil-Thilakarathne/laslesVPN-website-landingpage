@@ -1,0 +1,65 @@
+@use '../abstracts/' as *;
+
+.pricing{
+    min-height: 100vh;
+    width: min(100%, 1024px);
+    margin-inline: auto;
+    padding: max(5vh, 20px) 0;
+
+    & .section__header{
+        font-size: $section-header-fs;
+        font-weight: $section-header-fw;
+        text-align: center;
+    }
+    
+    & .pricing-cards{
+        width: 100%;
+        @include flex_box($direction: column, $row-gap: 20px);
+
+        & .price-card{
+            width: min(80%, 275px);
+            @include flex_box($direction: column, $row-gap: $size-5);
+            border: 2px solid $clr-background-400;
+            border-radius: $border-radius-1;
+            padding: $price-card-padding;
+    
+            &.premium-card{
+                border: $price-card-border-size solid $card-primary-border-clr;
+            }
+    
+            & .card-header{
+                font-size: $pricing-card-header-size;
+                font-weight: $pricing-card-header-weight;
+                color: $pricing-card-header-clr;
+            }
+    
+            & .card-features{
+                list-style: none;
+                @include flex_box($direction: column, $align: flex-start, $row-gap: $size-2);
+    
+            }
+    
+            & .card-price-section{
+                @include flex_box($direction: column, $row-gap: 10px);
+    
+                & .card-price{
+                    font-size: $pricing-card-price-size;
+                    font-weight: $pricing-card-price-weight;
+                    color: $pricing-card-price-clr;
+    
+                    & span{
+                        font-size: $pricing-card-price-span-size;
+                        font-weight: $pricing-card-price-span-weight;
+                    }
+    
+                }
+            }
+        }
+        @include mq(medium) {
+            & {
+                flex-direction: row;
+            }
+        }
+    }
+    
+}

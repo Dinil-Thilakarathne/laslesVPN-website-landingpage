@@ -1,0 +1,76 @@
+@use '../abstracts/' as *;
+
+.testimonials{
+    min-height: 50vh;
+    width: min(100%, 1024px);
+    margin: 0 auto;
+    padding: max(5vh, 20px) 0;
+    position: relative;
+    overflow: hidden;
+
+    & .section__content{
+        width: 100%;
+        @include flex_box($direction: column);
+        text-align: center;
+        padding: 0 20px;
+
+        
+
+        & .content__header{
+            font-size: $testimonials-content-header-size;
+            font-weight: $testimonials-content-header-weight;
+            color: $testimonials-content-header-clr;
+        }
+        & .content__info{
+            padding-top: 10px;
+        }
+    }
+
+    & .section__cards{
+        padding: 20px;
+        width: 100%;
+        @include flex_box($direction: column,$row-gap: 20px);
+        display: flex;
+
+
+        & .testimonial__card{
+            max-width: 80%;
+            background-color: $testimonial-card-bg-clr;
+            border: none;
+            border-radius: $testimonial-card-border-radius;
+            padding: $testimonial-card-padding;
+            @include flex_box($direction: column, $justify: space-evenly);
+
+            & .card__top{
+                width: 100%;
+                @include flex_box($justify: space-evenly, $col-gap: 40px);
+
+                & .user__name{
+                    font-size: $testimonials-content-user-name-size;
+                    font-weight: $testimonials-content-user-name-weight;
+                }
+
+                & .user__info{
+                    font-size: $testimonial-card-user-info-size;
+                }
+
+                & .user__review{
+                    @include flex_box($col-gap: 10px);
+                }
+
+            }
+            & .user__message{
+                padding: $size-3 $size-5;
+            }
+        }
+        @include mq(medium) {
+            flex-direction: row;
+            flex-wrap: wrap;
+    
+            & .testimonial__card{
+                width: calc(1024px / 2.1);
+                min-height: 200px;
+            }
+        }
+    }
+}

@@ -1,0 +1,168 @@
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+// global tokens
+$letter-spacing-loose: 0;
+
+$section-header-fs: $font-size-800;
+$section-header-fw: $font-weight-bold;
+
+$border-radius-1: $size-2;
+$border-radius-2: $size-4;
+
+$box-shadow-1: 0px 6px 5px rgb(0, 0, 0, 0.012),
+  0px 22px 18px rgb(0, 0, 0, 0.018), 0px 100px 80px rgb(0, 0, 0, 0.03);
+
+$box-shadow-2: 0px 6px 5px rgb(0, 0, 0, 0.016),
+  0px 22px 18px rgb(0, 0, 0, 0.024), 0px 100px 80px rgb(0, 0, 0, 0.04);
+
+$box-shadow-3: 0px 6px 5px rgb(0, 0, 0, 0.02), 0px 22px 18px rgb(0, 0, 0, 0.03),
+  0px 100px 80px rgb(0, 0, 0, 0.05);
+
+$box-shadow-4: 0px 6px 5px rgb(0, 0, 0, 0.03), 0px 22px 18px rgb(0, 0, 0, 0.042),
+  0px 100px 80px rgb(0, 0, 0, 0.07);
+
+$box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
+  0px 100px 80px rgb(0, 0, 0, 0.1);
+
+
+// body
+$body-font-family: $font-family-base;
+$body-font-size: $font-size-400;
+$body-line-height: 1.5;
+$body-font-weight: $font-weight-default;
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+
+$link-color: $color-text-interactive-default;
+$link-color-hover: $color-text-interactive-hover;
+
+$heading-font-family: $font-family-accent;
+$heading-color-default: $clr-text-400;
+$heading-font-weight: $font-weight-bold;
+$heading-letter-spacing: $letter-spacing-loose;
+$heading-line-height: 1.1;
+$heading-text-transform: uppercase;
+
+$heading-1-font-size: $font-size-900;
+$heading-1-color: $heading-color-default;
+$heading-2-font-size: $font-size-800;
+$heading-2-color: $heading-color-default;
+$heading-3-font-size: $font-size-700;
+$heading-3-color: $heading-color-default;
+
+
+// buttons
+$button-font-family: $body-font-family;
+$button-font-size: $font-size-400;
+$button-font-weight: $font-weight-bold;
+$button-text-transform: uppercase;
+$button-padding: 0.75em 2em;
+$button-border: 0;
+$button-border-radius: $border-radius-1;
+
+$button-primary-color: $clr-text-100;
+$button-primary-text-color: $clr-text-000;
+$button-primary-background: $clr-primary-400;
+$button-primary-color-hover: $clr-text-400;
+$button-outline-color-hover: $clr-text-000;
+$button-outline-background-hover: $clr-primary-200;
+$button-primary-background-hover: $clr-primary-200;
+
+
+// header 
+$header-link-size: $font-size-700;
+$header-link-weight: $font-weight-semi-bold;
+$nav-icon-size: $font-size-800;
+$header-height: 75px ;
+
+
+// hero 
+$hero-content-header-size: $font-size-800;
+$hero-content-header-weight: $font-weight-bold;
+$hero-content-info-size: $font-size-400;
+
+$hero-content-btn-bg-color: $clr-primary-400;
+$hero-content-btn-color: $clr-text-000;
+$hero-content-btn-hover-bg-color: $clr-text-000;
+$hero-content-btn-hover-color: $clr-primary-400;
+
+
+// cleint section 
+$cleint-bg-color: $clr-background-100;
+$cleint-icon-size: $font-size-500;
+$cleint-icon-height: calc($cleint-icon-size * 2);
+$cleint-icon-header-weight: $font-weight-bold;
+
+// features section 
+$features-content-header-size: $font-size-800;
+$features-content-header-weight: $font-weight-bold;
+$features-content-info-size: $font-size-400;
+
+// pricing section 
+$price-card-padding: $size-5;
+$price-card-border-size: $size-1;
+$price-card-border-radius: $border-radius-1;
+
+$pricing-card-header-size: $font-size-600;
+$pricing-card-header-weight: $font-weight-bold;
+$pricing-card-header-clr: $clr-text-400;
+$pricing-card-item-size: $font-size-400;
+$pricing-card-item-weight: $font-weight-default;
+$pricing-card-item-clr: $clr-text-400;
+$pricing-card-price-size:  $font-size-700;
+$pricing-card-price-weight: $font-weight-bold;
+$pricing-card-price-clr: $clr-text-400;
+$pricing-card-price-span-size:  $font-size-400;
+$pricing-card-price-span-clr: $clr-text-200;
+$pricing-card-price-span-weight: $font-weight-default;
+
+$card-default-border-clr : $clr-background-200;
+$card-primary-border-clr : $clr-primary-400;
+
+// testimonials sections 
+$testimonials-content-header-size: $font-size-800;
+$testimonials-content-header-weight: $font-weight-bold;
+$testimonials-content-header-clr: $clr-text-400;
+$testimonials-content-user-name-size: $font-size-600;
+$testimonials-content-user-name-weight: $font-weight-semi-bold;
+$testimonials-content-info-size: $font-size-400;
+
+$testimonial-card-bg-clr: $clr-background-200;
+$testimonial-card-border-radius: $size-2;
+$testimonial-card-padding: $size-4;
+$testimonial-card-user-info-size: $font-size-100;
+
+
+// newletter section 
+$newsletter-content-header-size: $font-size-700;
+$newsletter-content-header-weight: $font-weight-bold;
+$newsletter-content-header-clr: $clr-text-400;
+$newsletter-content-description-size: $font-size-300;
+$newsletter-content-description-weight: $font-weight-default;
+$newsletter-content-description-clr: $clr-text-200;
+
+$newsletter-bg-clr: $clr-background-150;
+$newsletter-padding: $size-5;
+$newsletter-border-radius: $border-radius-2;
+
+// footer section 
+$footer-body-icon-height: 40px;
+$footer-body-icon-size: $font-size-600;
+$footer-body-icon-bg-clr: $clr-primary-100;
+$footer-body-icon-clr: $clr-text-000;
+
+
+$footer-nav-header-size: $font-size-600;
+$footer-nav-header-weight: $font-weight-semi-bold;
+$footer-nav-header-clr: $clr-text-400;
+$footer-nav-item-size: $font-size-200;
+$footer-nav-item-weight: $font-weight-default;
+$footer-nav-item-clr: $clr-text-200;
+
+// scroll bar 
+$scroll-bar-width: 10px;
+$scroll-bar-bg-color: $clr-primary-200;
+$scroll-bar-hover-bg-color: $clr-primary-400;
+

@@ -1,0 +1,59 @@
+@use '../abstracts/' as *;
+
+.client{
+    background-color: $cleint-bg-color;
+    @include flex_box($direction: column);
+    gap: 10px;
+    padding: 0 $size-5;
+    width: min(100%, 1024px);
+    margin-inline: auto;
+    overflow: hidden;
+
+    & .container{
+        @include flex_box($justify:center);
+
+        & .icon{
+            background-color: $clr-primary-100;
+            font-size: $cleint-icon-size;
+            height: $cleint-icon-height;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            @include flex_box($justify:center);
+        }
+
+        & .content{
+            @include flex_box($direction:column,$justify:center);
+            padding-left: 10px;
+
+            &__header{
+                font-weight:  $cleint-icon-header-weight;
+            }
+        }
+    }
+
+    & .divider{
+        height: 5px;
+        width: 80%;
+        border: none;
+        border-radius: 10px;
+        background-color: $clr-primary-100;
+    }
+
+    @include mq(small){
+        height: $header-height;
+        flex-direction: row;
+
+        & .container{
+
+            & .content{
+                align-items: flex-start;
+            }
+
+        }
+        & .divider{
+            height: 80%;
+            width: 5px;
+        }
+
+    }
+}

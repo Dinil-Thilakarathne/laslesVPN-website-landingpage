@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+@each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+        .clr-#{$color}-#{$shade} {
+            color : #{$value};
+        }
+    }
+};
+@each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+        .bg-#{$color}-#{$shade} {
+            background-color : #{$value};
+        }
+    }
+}
+

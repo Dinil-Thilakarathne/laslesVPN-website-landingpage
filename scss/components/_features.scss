@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+
+.features {
+    height: max(100vh);
+    width: min(100%, 1024px);
+    margin-inline: auto;
+    overflow: hidden;
+    @include flex_box($direction: column,$justify:center,$row-gap: 2rem);
+
+    &__image{
+        max-width: 80%;
+    }
+
+    &__content{
+        padding: 0 $size-5;
+        @include flex_box($direction: column, $align:flex-start);
+
+        & .content__header{
+            font-size: $features-content-header-size;
+            font-weight: $features-content-header-weight;
+        }
+
+        & .content__items{
+            padding-top: 10px;
+            padding-left: 20px;
+
+            & .content__item{
+                list-style-type: none;
+                color: $clr-text-100;
+                @include flex_box($justify:flex-start);
+
+                & i{
+                    color: $clr-primary-400;
+                }
+                & span{
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+    @include mq(medium) {
+        & {
+            flex-direction: row;
+
+            &__content{
+                padding: 0 $size-10;
+            }
+        }
+    }
+}

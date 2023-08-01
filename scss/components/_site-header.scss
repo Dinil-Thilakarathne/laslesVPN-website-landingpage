@@ -1,0 +1,113 @@
+@use '../abstracts/' as *;
+
+.header{
+    @include flex_box($direction: row);
+    position: relative;
+    height: $header-height;
+    width: min(100%, 1440px);
+    margin-inline: auto;
+    padding: 0 $size-2;
+
+    & .header__nav__icon{
+        position: absolute;
+        right: 10px;
+        font-size: $nav-icon-size;
+        cursor: pointer;
+        display: block;
+
+        &:is(:focus,:hover){
+            color: $clr-primary-400;
+        }
+        @include mq(medium){
+            display: none;
+        }
+    }
+
+
+    &__nav{
+        position: absolute;
+        right: 10px;
+        top: 90px;
+        background-color: $clr-background-200;
+        border: none;
+        border-radius: $border-radius-2;
+        @include flex_box($direction: column);
+        align-items: flex-start;
+        height: 0;
+        width: max(25%,350px);
+        overflow: hidden;
+        transition: height .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        
+        &.active{
+            padding: $size-10;
+            height: max(60vh, 450px);
+
+            @include mq(small) {
+
+            }
+        }
+
+        & .menu__item{
+            list-style: none;
+
+            & .menu__link{
+                text-decoration: none;
+                font-size: $header-link-size;
+                font-weight: $header-link-weight;
+            }
+        }
+        & .nav__btns{
+            width: 100%;
+            @include flex_box($direction: column,$align : flex-start,$col-gap:10px);
+
+            & .sign-in-btn{
+                background-color: transparent;
+                color: $clr-primary-400;
+            }
+            & .sign-up-btn{
+                border: .125rem solid $clr-primary-400;
+            }
+        }
+
+        @include mq(medium) {
+            & {
+                width: min(80%,1000px);
+                height: 100%;
+                position: static;
+                border-radius: 0;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                column-gap: 30px;
+                
+                & .nav__menu{
+                    // width: 75%;
+                    @include flex_box($justify:  flex-end, $col-gap: 20px);
+
+                    & .menu__item {
+
+                        & .menu__link{
+                            font-size: calc($header-link-size / 1.5);
+                        }
+                    }
+                    
+                }
+                & .nav__btns{
+                    width: max(200px);
+                    flex-direction: row;
+
+                    .button{
+                        padding: .5rem 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq(large) {
+        & {
+            padding: 0 $size-10;
+        }
+    }
+}

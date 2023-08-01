@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+@each $font, $sizes in $font-sizes {
+    @each $size, $value in $sizes {
+        @if $font == small {
+            .fs-#{$font}-#{$size} {
+                font-size: #{$value};
+            }
+        }
+    }
+}

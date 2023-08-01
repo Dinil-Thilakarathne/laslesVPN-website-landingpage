@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+
+.news-letter{
+    min-height: 250px;
+    width: min(90%, 1024px);
+    margin-inline: auto;
+    border: none;
+    border-radius: $newsletter-border-radius;
+    background-color: $newsletter-bg-clr;
+    padding: $newsletter-padding;
+    overflow: hidden;
+
+    @include flex_box($direction: column, $row-gap: 20px);
+    
+    & .section__content{
+        
+        & .content__header{
+            font-size: $newsletter-content-header-size;
+            font-weight: $newsletter-content-header-weight;
+            color: $newsletter-content-header-clr;
+        }
+        
+        & .content__description{
+            padding-top: 1rem;
+            font-size: $newsletter-content-description-size;
+        }
+    }
+    
+    & .section__input{
+        width: 100%;
+        @include flex_box($direction: column, $row-gap: 10px);
+
+        
+        & input{
+            width: 80%;
+            padding: $size-1 $size-4;
+            border-radius: $size-2;
+        }
+
+    }
+    @include mq(medium){
+        & {
+            min-height: 200px;
+            flex-direction: row;
+
+            & .section__input{
+                width: 50%;
+            }
+        }
+    }
+}
